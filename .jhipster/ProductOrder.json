@@ -27,22 +27,22 @@
     "relationships": [
         {
             "relationshipType": "one-to-many",
-            "otherEntityName": "orderItem",
-            "otherEntityRelationshipName": "order",
-            "relationshipName": "orderItem"
-        },
-        {
-            "relationshipType": "one-to-many",
             "otherEntityName": "invoice",
             "otherEntityRelationshipName": "order",
             "relationshipName": "invoice"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "orderItem",
+            "otherEntityRelationshipName": "order",
+            "relationshipName": "orderItem"
         },
         {
             "relationshipType": "many-to-one",
             "otherEntityName": "customer",
             "otherEntityRelationshipName": "order",
             "relationshipName": "customer",
-            "otherEntityField": "id"
+            "otherEntityField": "email"
         }
     ],
     "changelogDate": "20210506174859",
