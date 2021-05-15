@@ -42,9 +42,7 @@ describe('Customer e2e test', () => {
       customerUpdatePage.setFirstNameInput('firstName'),
       customerUpdatePage.setLastNameInput('lastName'),
       customerUpdatePage.genderSelectLastOption(),
-      customerUpdatePage.setEmailInput(
-        'im?os,Ck5BsAO+e%yFAL@&#34;adsbN6*he&lt;TGZ`g4TSP;OHVrn+0~A-N3mwndp8lt4b+e)(UB8Q#Z1iUY6y|(oS:G;S6q(nF+8=&#39;80aZM6lYV1DGA6(L4oy1m.#}/h9u`}&#39;&lt;h5!t#u8$tEEYD,&lt;h!}H2|S3W:G^?*ec=4X7,AhVllc,-[x'
-      ),
+      customerUpdatePage.setEmailInput('email@email.com'),
       customerUpdatePage.setPhoneInput('phone'),
       customerUpdatePage.setAddressLine1Input('addressLine1'),
       customerUpdatePage.setAddressLine2Input('addressLine2'),
@@ -54,10 +52,7 @@ describe('Customer e2e test', () => {
     ]);
     expect(await customerUpdatePage.getFirstNameInput()).to.eq('firstName', 'Expected FirstName value to be equals to firstName');
     expect(await customerUpdatePage.getLastNameInput()).to.eq('lastName', 'Expected LastName value to be equals to lastName');
-    expect(await customerUpdatePage.getEmailInput()).to.eq(
-      'im?os,Ck5BsAO+e%yFAL@&#34;adsbN6*he&lt;TGZ`g4TSP;OHVrn+0~A-N3mwndp8lt4b+e)(UB8Q#Z1iUY6y|(oS:G;S6q(nF+8=&#39;80aZM6lYV1DGA6(L4oy1m.#}/h9u`}&#39;&lt;h5!t#u8$tEEYD,&lt;h!}H2|S3W:G^?*ec=4X7,AhVllc,-[x',
-      'Expected Email value to be equals to im?os,Ck5BsAO+e%yFAL@&#34;adsbN6*he&lt;TGZ`g4TSP;OHVrn+0~A-N3mwndp8lt4b+e)(UB8Q#Z1iUY6y|(oS:G;S6q(nF+8=&#39;80aZM6lYV1DGA6(L4oy1m.#}/h9u`}&#39;&lt;h5!t#u8$tEEYD,&lt;h!}H2|S3W:G^?*ec=4X7,AhVllc,-[x'
-    );
+    expect(await customerUpdatePage.getEmailInput()).to.eq('email@email.com', 'Expected Email value to be equals to email@email.com');
     expect(await customerUpdatePage.getPhoneInput()).to.eq('phone', 'Expected Phone value to be equals to phone');
     expect(await customerUpdatePage.getAddressLine1Input()).to.eq(
       'addressLine1',
